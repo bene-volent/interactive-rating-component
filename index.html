@@ -40,32 +40,34 @@
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
           </p>
-          <div class="rate | fs-400 fw-bold" data-rating="0">
-            <span class="rating">
-              <input type="radio" class="visually-hidden" name="rating" id="star1" value="1" />
-              <label for="star1" title="text" onclick="handleRating(this)">1</label>
-            </span>
-            <span class="rating">
-              <input type="radio" class="visually-hidden" name="rating" id="star2" value="2" />
-              <label for="star2" title="text" onclick="handleRating(this)">2</label>
-
-            </span>
-            <span class="rating">
-              <input type="radio" class="visually-hidden" name="rating" id="star3" value="3" />
-              <label for="star3" title="text" onclick="handleRating(this)">3</label>
-            </span>
-            <span class="rating">
-              <input type="radio" class="visually-hidden" name="rating" id="star4" value="4" />
-              <label for="star4" title="text" onclick="handleRating(this)">4</label>
-            </span>
-            <span class="rating">
-              <input type="radio" class="visually-hidden" name="rating" id="star5" value="5" />
-              <label for="star5" title="text" onclick="handleRating(this)">5</label>
-            </span>
-          </div>
-          <button type="submit" class="[Composition] | 
-                       [Utility] padding-200 capsule text-upper fw-bold bg-orange text-white fs-300
-                       [Block] submit-button">submit</button>
+          <fieldset class="| grid-flow padding-0 margin-0 border-0" role="radiogroup">
+            <legend class="visually-hidden">Ratings : 1 to 5</legend>
+            <div class="rate | fs-400 fw-bold" data-rating="0">
+              <span class="rating">
+                <input type="radio" class="visually-hidden" name="rating" id="star1" value="1" />
+                <label for="star1" title="text" onclick="handleRating(this)">1</label>
+              </span>
+              <span class="rating">
+                <input type="radio" class="visually-hidden" name="rating" id="star2" value="2" />
+                <label for="star2" title="text" onclick="handleRating(this)">2</label>
+              </span>
+              <span class="rating">
+                <input type="radio" class="visually-hidden" name="rating" id="star3" value="3" />
+                <label for="star3" title="text" onclick="handleRating(this)">3</label>
+              </span>
+              <span class="rating">
+                <input type="radio" class="visually-hidden" name="rating" id="star4" value="4" />
+                <label for="star4" title="text" onclick="handleRating(this)">4</label>
+              </span>
+              <span class="rating">
+                <input type="radio" class="visually-hidden" name="rating" id="star5" value="5" />
+                <label for="star5" title="text" onclick="handleRating(this)">5</label>
+              </span>
+            </div>
+            <button type="submit" class="[Composition] |
+                         [Utility] padding-200 capsule text-upper fw-bold bg-orange text-white fs-300
+                         [Block] submit-button">submit</button>
+          </fieldset>
       </form>
 
       <!-- Rating state end -->

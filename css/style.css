@@ -211,6 +211,9 @@ body {
 }
 
 /* Paddings */
+.padding-0{
+    padding: 0;
+}
 .padding-200 {
     padding: var(--size-200);
 }
@@ -234,6 +237,9 @@ body {
 }
 /* Margins */
 
+.margin-0{
+    margin:0;
+}
 .margin-x-auto {
     margin-inline: auto;
 }
@@ -249,6 +255,9 @@ body {
 }
 .border-radius-1 {
     border-radius: 1.5rem;
+}
+.border-0{
+    border: none;
 }
 
 /* Font Sizes */
