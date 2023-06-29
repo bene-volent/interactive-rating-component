@@ -128,8 +128,7 @@ body {
 .thankyou-card {
     /* z-index: 3; */
     position: absolute;
-    top: 0;
-    left: 0;
+    inset:0;
     transition: clip-path 200ms ease-in-out;
 }
 
@@ -155,7 +154,7 @@ body {
         clip-path: inset(0% 100% 0% 0%);
     }
     100% {
-        clip-path: inset(0% 0% 0% 0%);
+        clip-path: inset(0% 50% 0% 0%);
     }
 }
 
