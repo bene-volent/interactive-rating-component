@@ -1,1 +1,1 @@
-# Interactive Rating Card By [***Frontend Mentor***](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI) 
+# Interactive Rating Card By [***Frontend Mentor***](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI)

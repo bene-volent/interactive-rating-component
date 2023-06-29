@@ -209,22 +209,26 @@ body {
 
 /* Paddings */
 .padding-200 {
-    padding: 0.75rem;
+    padding: var(--size-200);
 }
 
 .padding-400 {
-    padding: 1rem;
+    padding: var(--size-400);
 }
 
 .padding-800 {
-    padding: 2rem;
+    padding: var(--size-800);
 }
 
 .padding-x-200 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: var(--size-200);
+    padding-right: var(--size-200);
 }
 
+.padding-x-500 {
+    padding-left: var(--size-400);
+    padding-right: var(--size-400);
+}
 /* Margins */
 
 .margin-x-auto {
@@ -306,6 +310,7 @@ body {
     justify-content: center;
     align-items: center;
     width: fit-content;
+    padding: 0.25rem var(--size-400);
 
     background-color: hsl(var(--medium-grey) / 0.15);
 }
