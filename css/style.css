@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 
-[aria-hidden="true"] {
+[aria-hidden="true"],.visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(100%);
     height: 1px;
