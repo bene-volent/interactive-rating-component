@@ -146,6 +146,10 @@ body {
     animation: shrink-swipe 750ms forwards;
 }
 
+.bg-card{
+    background: radial-gradient(circle at top,var(--clr-dark-blue) , var(--clr-very-dark-blue) 178%);
+}
+
 @keyframes expand-swipe {
     0% {
         clip-path: inset(0% 100% 0% 0%);
@@ -245,7 +249,7 @@ body {
     aspect-ratio: 1 / 1;
 }
 .border-radius-1 {
-    border-radius: 1rem;
+    border-radius: 1.5rem;
 }
 
 /* Font Sizes */
