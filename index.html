@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png" />
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="[Composition]
+              [Utility] grid-flow grid-center bg-very-dark-blue text-medium-grey ff-default fs-400
+              [Block] ">
+  <main>
+    <article class="rating-card | border-radius-1  bg-dark-blue overflow-hidden" >
+
+      <!-- Rating state start -->
+
+      <section class="select-card | grid-flow padding-800 square bg-dark-blue" data-show="true">
+        <img class="| padding-400 circle bg-medium-grey
+                    [Block] star" src="./assets/img/icon-star.svg" alt="Rating Star" />
+        <h1 class="| fs-600 text-white">How did we do?</h1>
+        <p class="">
+          Please let us know how we did with your support request. All
+          feedback is appreciated to help us improve our offering!
+        </p>
+        <div class="rate | fs-400 fw-bold" data-rating="0">
+          <span class="rating" >
+            <input type="radio"  name="rating" id="star1" value="1" aria-hidden="true" />
+            <label for="star1" title="text" onclick="handleRating(this)" >1</label>
+          </span>
+          <span class="rating">
+            <input type="radio"  name="rating" id="star2" value="2" aria-hidden="true" />
+            <label for="star2" title="text" onclick="handleRating(this)">2</label>
+            
+          </span>
+          <span class="rating">
+            <input type="radio" name="rating" id="star3" value="3" aria-hidden="true" />
+            <label for="star3" title="text"  onclick="handleRating(this)" >3</label>
+          </span>
+          <span class="rating">
+            <input type="radio" name="rating" id="star4" value="4" aria-hidden="true" />
+            <label for="star4" title="text" onclick="handleRating(this)" >4</label>
+          </span>
+          <span class="rating">
+            <input type="radio" name="rating" id="star5" value="5" aria-hidden="true" />
+            <label for="star5" title="text"  onclick="handleRating(this)" >5</label>
+          </span>
+        </div>
+        <button class="[Composition] | 
+                       [Utility] padding-200 capsule text-upper fw-bold bg-orange text-white fs-300
+                       [Block] submit-button"
+                onclick="showThanks()"
+                       >submit</button>
+      </section>
+
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <section class="thankyou-card | grid-flow padding-800 square text-center bg-dark-blue " data-show="false">
+        <img class="margin-x-auto" src="./assets/img/illustration-thank-you.svg" alt="Thank You" />
+        <div class="selected-rating | margin-x-auto padding-x-200 capsule text-orange">
+          <p class="">
+            You selected
+            <span class="" id="rating">
+              &nbsp;
+            </span>
+            out of 5
+          </p>
+        </div>
+        <h2 class="fs-600 text-white">Thank you!</h2>
+        <p class="">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, dont hesitate to get in touch!
+        </p>
+      </section>
+
+      <!-- Thank you state end -->
+    </article>
+  </main>
+
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/bene-volent" target="_blank">Benevolent</a>.
+  </div>
+
+  <script>
+
+    const rating = document.querySelector(".rate")
+    const ratingChosen = document.querySelector("#rating");
+    
+    function handleRating(label){
+      const input = document.getElementById(label.getAttribute("for"))
+      rating.dataset.rating = rating.dataset.rating !== input.value? input.value : 0
+      ratingChosen.textContent = rating.dataset.rating
+
+    }
+    function showThanks(){
+      document.querySelector(".thankyou-card").dataset.show = rating.dataset.rating!=='0';
+      document.querySelector(".select-card").dataset.show = rating.dataset.rating==='0';
+    }
+
+  </script>
+
+</body>
+
+</html>
